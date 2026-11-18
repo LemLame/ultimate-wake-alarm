@@ -1,0 +1,16 @@
+.gradle/
+**/build/
+app/build/
+local.properties
+*.keystore
+*.jks
+*.p12
+*.pfx
+*.apk
+*.idsig
+*.log
+.idea/
+.DS_Store
+signing.properties
+signing-password*
+release-private/
