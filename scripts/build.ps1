@@ -36,7 +36,7 @@ $localManifest = Join-Path $work 'AndroidManifest.xml'
 $manifest.Save($localManifest)
 $unsigned = Join-Path $work 'unsigned.apk'
 Invoke-Checked $aapt @('link','-o',$unsigned,'-I',$sdkJar,'--manifest',$localManifest,'--java',$generated,
-    '--min-sdk-version','26','--target-sdk-version','35','--version-code','2','--version-name','1.1.0',$resources)
+    '--min-sdk-version','26','--target-sdk-version','35','--version-code','3','--version-name','1.1.1',$resources)
 $sources = @(Get-ChildItem -LiteralPath (Join-Path $work 'java'),$generated -Recurse -Filter '*.java' |
     Select-Object -ExpandProperty FullName)
 Invoke-Checked (Join-Path $Jdk 'bin\javac.exe') (@('-J-Duser.language=en','-Xlint:-options','-encoding','UTF-8','--release','8','-classpath',$sdkJar,'-d',$classes) + $sources)
@@ -58,7 +58,7 @@ if (-not (Test-Path -LiteralPath $key)) {
         '-keypass','android','-alias','androiddebugkey','-dname','CN=Android Debug,O=WakeTerminal,C=JP',
         '-keyalg','RSA','-keysize','2048','-validity','10000','-noprompt')
 }
-$apk = Join-Path $out 'wake-terminal-debug.apk'
+$apk = Join-Path $out 'ultimate-wake-alarm-debug.apk'
 Invoke-Checked (Join-Path $buildTools.FullName 'apksigner.bat') @('sign','--ks',$key,'--ks-pass','pass:android',
     '--key-pass','pass:android','--out',$apk,$aligned)
 Invoke-Checked (Join-Path $buildTools.FullName 'apksigner.bat') @('verify','--verbose',$apk)
@@ -85,7 +85,7 @@ if ($IncludeDeviceTests) {
     } finally { $archive.Dispose() }
     $testAligned = Join-Path $work 'test-aligned.apk'
     Invoke-Checked (Join-Path $buildTools.FullName 'zipalign.exe') @('-f','4',$testUnsigned,$testAligned)
-    $testApk = Join-Path $out 'wake-terminal-device-tests.apk'
+    $testApk = Join-Path $out 'ultimate-wake-alarm-device-tests.apk'
     Invoke-Checked (Join-Path $buildTools.FullName 'apksigner.bat') @('sign','--ks',$key,'--ks-pass','pass:android',
         '--key-pass','pass:android','--out',$testApk,$testAligned)
     Write-Output "TEST APK: $testApk"

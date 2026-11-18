@@ -19,7 +19,7 @@
     <queries>
         <intent><action android:name="android.content.SyncAdapter" /></intent>
     </queries>
-    <application android:label="起床端末" android:icon="@drawable/ic_alarm"
+    <application android:label="アルティメット目覚まし" android:icon="@drawable/ic_alarm"
         android:theme="@style/AppTheme" android:allowBackup="false" android:fullBackupContent="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:supportsRtl="true">

@@ -1,4 +1,6 @@
-# Wake Terminal
+# アルティメット目覚まし / Ultimate Wake Alarm
+
+**止めても3分後にもう一度。スヌーズを寝過ごす人のための二段確認アラーム。**
 
 Googleカレンダーに起床予定を入れると、その時刻にAndroid端末で鳴るアラームです。空いているタブレットを専用の起床端末として使えます。
 
@@ -8,7 +10,9 @@ Android 8.0（API 26）以上。ソースと署名済みAPKをGitHubで配布し
 
 ## ダウンロード
 
-[Releases](https://github.com/LemLame/wake-terminal/releases/latest) から `wake-terminal-v1.1.0.apk` を取得してください。各ReleaseにSHA-256も添付します。
+[Releases](https://github.com/LemLame/ultimate-wake-alarm/releases/latest) から `ultimate-wake-alarm-v1.1.1.apk` を取得してください。各ReleaseにSHA-256も添付します。
+
+旧名はWake Terminalです。公開版v1.1.0からは同じ署名鍵で上書き更新でき、設定を引き継ぎます。
 
 初回は端末でAPKのインストールを許可し、以下の設定を行います。
 

@@ -27,7 +27,7 @@ final class Notifications {
     }
     static Notification monitor(Context c, String text) {
         return new Notification.Builder(c, MONITOR).setSmallIcon(R.drawable.ic_alarm)
-            .setContentTitle("起床端末 · 監視中").setContentText(text).setOngoing(true)
+            .setContentTitle("アルティメット目覚まし · 監視中").setContentText(text).setOngoing(true)
             .setContentIntent(screen(c, MainActivity.class)).build();
     }
     static Notification alarm(Context c, AlarmSession s, boolean fullScreen) {

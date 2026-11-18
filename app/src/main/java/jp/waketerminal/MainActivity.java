@@ -52,8 +52,9 @@ public final class MainActivity extends Activity {
         ScrollView scroll = new ScrollView(this); scroll.setFillViewport(true); scroll.setBackgroundColor(Ui.BG);
         LinearLayout layout = new LinearLayout(this); layout.setOrientation(LinearLayout.VERTICAL);
         scroll.addView(layout); setContentView(scroll); Ui.insets(this, layout, 28);
-        TextView brand = Ui.text(this, "WAKE TERMINAL  /  起床端末", 13, Ui.GOLD); Ui.bold(brand); layout.addView(brand);
-        TextView title = Ui.text(this, "明日の朝を、\nカレンダーに預ける。", 30, Ui.INK); Ui.bold(title); layout.addView(title);
+        TextView brand = Ui.text(this, "アルティメット目覚まし", 20, Ui.GOLD); Ui.bold(brand); layout.addView(brand);
+        TextView title = Ui.text(this, "止めても3分後に、\nもう一度。", 30, Ui.INK); Ui.bold(title); layout.addView(title);
+        layout.addView(Ui.text(this, "スヌーズを寝過ごす人のための\n二段確認アラーム。", 16, Ui.MUTED));
         status = Ui.text(this, "準備中", 16, Ui.GREEN); layout.addView(status);
         layout.addView(Ui.text(this, "次の起床", 13, Ui.MUTED));
         nextTime = Ui.text(this, "— — : — —", 48, Ui.INK); Ui.bold(nextTime); layout.addView(nextTime);

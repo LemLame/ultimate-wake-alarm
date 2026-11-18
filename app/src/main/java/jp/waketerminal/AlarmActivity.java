@@ -33,7 +33,7 @@ public final class AlarmActivity extends Activity {
         LinearLayout layout = new LinearLayout(this); layout.setOrientation(LinearLayout.VERTICAL);
         layout.setGravity(Gravity.CENTER); layout.setBackgroundColor(Ui.BG);
         setContentView(layout); Ui.insets(this, layout, 28);
-        TextView brand = Ui.text(this, "WAKE TERMINAL", 14, Ui.GOLD); brand.setGravity(Gravity.CENTER); layout.addView(brand);
+        TextView brand = Ui.text(this, "アルティメット目覚まし", 18, Ui.GOLD); brand.setGravity(Gravity.CENTER); layout.addView(brand);
         clock = Ui.text(this, "", 60, Ui.INK); Ui.bold(clock); clock.setGravity(Gravity.CENTER); layout.addView(clock);
         title = Ui.text(this, "起きる時間です", 28, Ui.INK); Ui.bold(title); title.setGravity(Gravity.CENTER); layout.addView(title);
         detail = Ui.text(this, "", 16, Ui.MUTED); detail.setGravity(Gravity.CENTER); layout.addView(detail);

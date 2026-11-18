@@ -11,8 +11,8 @@ function Invoke-Adb([string[]]$Arguments) {
     & adb -s $Serial @Arguments
     if ($LASTEXITCODE -ne 0) { throw "adb failed: $Arguments" }
 }
-Invoke-Adb @('install','--no-incremental','-r',(Join-Path $out 'wake-terminal-debug.apk'))
-Invoke-Adb @('install','--no-incremental','-r',(Join-Path $out 'wake-terminal-device-tests.apk'))
+Invoke-Adb @('install','--no-incremental','-r',(Join-Path $out 'ultimate-wake-alarm-debug.apk'))
+Invoke-Adb @('install','--no-incremental','-r',(Join-Path $out 'ultimate-wake-alarm-device-tests.apk'))
 foreach ($permission in @('READ_CALENDAR','WRITE_CALENDAR','POST_NOTIFICATIONS')) {
     Invoke-Adb @('shell','pm','grant','jp.waketerminal',"android.permission.$permission")
 }
